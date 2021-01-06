@@ -29,27 +29,31 @@ class App extends Component{
       const habits = this.state.habits.filter(itme => itme.id !== habit.id);
       this.setState({habits});
   };
+  handleAdd = name => {
+    const habits = [...this.state.habits, { id:Date.now(), name, count:0}];
+    this.setState({habits});
+  };
+  handleReset = () => {
+    const habits = this.state.habits.map(habit => {
+      habit.count = 0;
+      return habit;
+    });
+    this.setState({habits});
+  };
 
-  handleAdd = habit => {
-      console.log(habit)
-  };
-  handleReset = habit => {
-    console.log(habit)
-  };
   render() {
     return (
       <div className="wrap">
         <Header totalCount={this.state.habits.filter(item => item.count > 0).length}/>
         <div className="content">
-          <input type="text" className="add-input "/>
-          <button className="add-button" onClick={this.handleAdd}>Add</button>
           <Habits
             habits={this.state.habits}
             onIncrement={this.handleIncrement}
             onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
+            onAdd={this.handleAdd}
+            onReset={this.handleReset}
           />
-          <button className="habits-reset" onClick={this.handleReset}>Reset All</button>
         </div>
       </div>
     );
