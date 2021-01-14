@@ -1,0 +1,17 @@
+.video_list {
+  padding: 0 20px 35px;
+  font-size: 0;
+  list-style: none;
+}
+.video_list li {
+  display: inline-block;
+  width: 50%;
+  height: 180px;
+  margin-top: -1px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  vertical-align: top;
+}
+.video_list li:nth-child(even) {
+  border-left: 0;
+}
