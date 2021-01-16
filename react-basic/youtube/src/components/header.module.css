@@ -12,9 +12,10 @@ header {
 }
 .logo svg {
   display: inline-block;
-  margin: 3px 3px 0 0;
+  margin-right: 3px;
   color: #f00;
   font-size: 50px;
+  vertical-align: bottom;
 }
 .search_box {
   display: inline-block;
