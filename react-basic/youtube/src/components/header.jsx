@@ -4,23 +4,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-const Header = memo(props => {
-    const formRef = useRef();
+const Header = memo(({onSearch}) => {
     const searchValue = useRef();
 
-    const onSubmit = event => {
-        event.preventDefault();
+    const handleSearch = () => {
         const search = searchValue.current.value;
-        console.log(search);
-    }
+        onSearch(search);
+    };
+    const onClick = () => {
+        handleSearch();
+    };
+    const onKeyPress = event => {
+        if(event.key === 'Enter'){
+            handleSearch();
+        }
+    };
 
     return (
         <header>
             <h1 className={styles.logo}><FontAwesomeIcon icon={faYoutube}/>Youtube</h1>
-            <form className={styles.search_box} ref={formRef} onSubmit={onSubmit}>
-                <input type="search" ref={searchValue}/>
-                <button><FontAwesomeIcon icon={faSearch} />검색</button>
-            </form>
+            <div className={styles.search_box}>
+                <input type="search" ref={searchValue} onKeyPress={onKeyPress}/>
+                <button type="submit" onClick={onClick}><FontAwesomeIcon icon={faSearch} />검색</button>
+            </div>
         </header>
     );
 });
