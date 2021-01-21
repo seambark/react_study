@@ -6,7 +6,7 @@ class Youtube {
             redirect: 'follow'
         };
     }
-
+    // string.replace(/\"/g,'\\"')
     async mostPopular() {
         const response = await fetch(
             `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${this.key}`,
