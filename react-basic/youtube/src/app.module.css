@@ -1,12 +1,15 @@
-* {
-  box-sizing: border-box;
-}
 .content {
   display: flex;
   position: relative;
   padding: 35px 20px;
 }
-.content .description {
+.detail {
+  flex: 1 1 70%;
+}
+.list {
+  flex: 1 1 30%;
+}
+/* .content .description {
   flex-grow: 1;
 }
 .content .list_box {
@@ -15,4 +18,4 @@
 }
 .content .list_box:only-child {
   width: 100%;
-}
+} */

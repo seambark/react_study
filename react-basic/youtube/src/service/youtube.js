@@ -9,7 +9,7 @@ class Youtube {
     // string.replace(/\"/g,'\\"')
     async mostPopular() {
         const response = await fetch(
-            `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${this.key}`,
+            `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=26&key=${this.key}`,
             this.getRequestOptions
         );
         const result = await response.json();
@@ -18,7 +18,7 @@ class Youtube {
 
     async search(query) {
         const response = await fetch(
-            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&type=video&key=${this.key}`,
+            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=26&q=${query}&type=video&key=${this.key}`,
             this.getRequestOptions
         );
         const result = await response.json();
