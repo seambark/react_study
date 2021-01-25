@@ -64,3 +64,9 @@ li {
   color: #707070;
   font-size: 16px;
 }
+
+@media screen and (max-width: 48rem) {
+  .grid {
+    width: 100%;
+  }
+}

@@ -22,10 +22,12 @@ const Header = memo(({onSearch}) => {
 
     return (
         <header>
-            <h1 className={styles.logo}><FontAwesomeIcon icon={faYoutube}/>Youtube</h1>
-            <div className={styles.search_box}>
-                <input type="search" ref={searchValue} onKeyPress={onKeyPress}/>
-                <button type="submit" onClick={onClick}><FontAwesomeIcon icon={faSearch} />검색</button>
+            <div className={styles.inner}>
+                <h1 className={styles.logo}><FontAwesomeIcon icon={faYoutube}/>Youtube</h1>
+                <div className={styles.search_box}>
+                    <input type="search" ref={searchValue} onKeyPress={onKeyPress}/>
+                    <button type="submit" onClick={onClick}><FontAwesomeIcon icon={faSearch} />검색</button>
+                </div>
             </div>
         </header>
     );

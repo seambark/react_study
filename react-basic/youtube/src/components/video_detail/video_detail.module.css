@@ -5,3 +5,9 @@
 pre {
   white-space: pre-wrap;
 }
+
+@media screen and (max-width: 48rem) {
+  .description {
+    padding-right: 0;
+  }
+}

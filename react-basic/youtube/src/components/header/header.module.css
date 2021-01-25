@@ -2,6 +2,10 @@ header {
   padding: 20px;
   background-color: black;
 }
+.inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
 .logo {
   display: inline-block;
   margin: 0 25px 0 0;

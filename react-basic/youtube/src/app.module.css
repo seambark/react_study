@@ -1,7 +1,9 @@
 .content {
   display: flex;
   position: relative;
-  padding: 35px 20px;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 35px 0;
 }
 .detail {
   flex: 1 1 70%;
@@ -9,13 +11,17 @@
 .list {
   flex: 1 1 30%;
 }
-/* .content .description {
-  flex-grow: 1;
+
+@media screen and (max-width: 48rem) {
+  .content {
+    flex-direction: column;
+  }
+  .detail + .list {
+    margin-top: 25px;
+  }
 }
-.content .list_box {
-  flex-shrink: 0;
-  width: 30%;
+@media screen and (max-width: 82rem) {
+  .content {
+    padding: 35px 20px;
+  }
 }
-.content .list_box:only-child {
-  width: 100%;
-} */
