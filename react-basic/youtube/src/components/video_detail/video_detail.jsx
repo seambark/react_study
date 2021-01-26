@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './video_detail.module.css';
 
 const VideoDetail = ({video, video: {snippet}}) => (
-    <section className={styles.description}>
+    <section className={styles.detail}>
         <iframe
             type="text/html"
             title="youtube video player"

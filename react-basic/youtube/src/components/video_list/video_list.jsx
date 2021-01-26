@@ -3,8 +3,8 @@ import VideoItem from '../video_item/video_item';
 import styles from './video_list.module.css';
 
 const VideoList = ({ videos, onVideoClick, display }) => (
-    <div className="list_box">
-        <ul className={styles.video_list}>
+    <section className={styles.video_list}>
+        <ul className={styles.list}>
             {videos.map(video => (
                 <VideoItem
                     key={video.id}
@@ -14,7 +14,7 @@ const VideoList = ({ videos, onVideoClick, display }) => (
                 />
             ))}
         </ul>
-    </div>
+    </section>
 );
 
 export default VideoList;

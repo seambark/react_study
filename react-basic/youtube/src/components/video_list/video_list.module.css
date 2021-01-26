@@ -1,5 +1,17 @@
 .video_list {
+  flex: 1 1 30%;
+}
+.list {
   padding: 0;
   font-size: 0;
   list-style: none;
+}
+
+@media screen and (max-width: 48rem) {
+  .video_list {
+    margin-top: 25px;
+  }
+  .video_list:first-child {
+    margin-top: 0;
+  }
 }
