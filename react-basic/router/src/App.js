@@ -7,18 +7,22 @@ import Profile from './components/profile';
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/profile">Profile</Link>
-      </nav>
-      <Switch>
-        <Route path={['/', '/home']} exact>
-          <Home />
-        </Route>
-        <Route path="/profile">
-          <Profile />
-        </Route>
-      </Switch>
+      <header>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/profile">Profile</Link>
+        </nav>
+      </header>
+      <div className="main" role="main">
+        <Switch>
+          <Route path={['/', '/home']} exact>
+            <Home />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }
