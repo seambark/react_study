@@ -1,0 +1,38 @@
+.loginArea {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  background-color: cadetblue;
+  text-align: center;
+}
+.loginArea header {
+  padding: 10px 20px;
+}
+.loginArea header img {
+  width: 100px;
+  height: 70px;
+}
+.loginArea header h2 {
+}
+.content {
+  padding: 20px 10px;
+  background-color: #fff;
+}
+ul {
+  margin-top: 20px;
+}
+li {
+  margin-top: 10px;
+}
+li:first-child {
+  margin-top: 0;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid cadetblue;
+  border-radius: 10px;
+  background-color: #fff;
+}
