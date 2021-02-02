@@ -4,6 +4,7 @@ import styles from './login.module.css'
 const Login = props => (
     <div className={styles.loginArea}>
         <header>
+            <img src="/images/logo.png" alt=""/>
             <h2>Business Card Maker</h2>
         </header>
         <div className={styles.content}>

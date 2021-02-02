@@ -4,20 +4,18 @@
   left: 50%;
   width: 400px;
   transform: translate(-50%, -50%);
+  border-radius: 6px;
   background-color: cadetblue;
   text-align: center;
 }
 .loginArea header {
-  padding: 10px 20px;
+  padding: 25px 20px 15px;
 }
 .loginArea header img {
-  width: 100px;
-  height: 70px;
-}
-.loginArea header h2 {
+  width: 60px;
 }
 .content {
-  padding: 20px 10px;
+  padding: 25px 10px;
   background-color: #fff;
 }
 ul {
@@ -35,4 +33,5 @@ button {
   border: 1px solid cadetblue;
   border-radius: 10px;
   background-color: #fff;
+  cursor: pointer;
 }
