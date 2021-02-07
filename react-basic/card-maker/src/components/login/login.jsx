@@ -1,23 +1,25 @@
 import React from 'react';
+import Footer from '../footer/footer';
+import Header from '../header/header';
 import styles from './login.module.css'
 
-const Login = props => (
-    <div className={styles.loginArea}>
-        <header>
-            <img src="/images/logo.png" alt=""/>
-            <h2>Business Card Maker</h2>
-        </header>
-        <div className={styles.content}>
-            <h3>Login</h3>
-            <ul>
-                <li><button type="button">Google</button></li>
-                <li><button type="button">Github</button></li>
-            </ul>
+const Login = ({authService}) => {
+    const onLogin = event => {
+        authService.login(event.currentTarget.textContent).then(console.log);
+    };
+    return (
+        <div className={styles.loginArea}>
+            <Header />
+            <div className={styles.content}>
+                <h3>Login</h3>
+                <ul>
+                    <li><button onClick={onLogin}>Google</button></li>
+                    <li><button onClick={onLogin}>Github</button></li>
+                </ul>
+            </div>
+            <Footer />
         </div>
-        <footer>
-            <p>Code your dream</p>
-        </footer>
-    </div>
-);
+    );
+};
 
 export default Login;
