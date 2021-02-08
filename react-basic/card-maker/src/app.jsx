@@ -2,10 +2,10 @@ import React from 'react';
 import './app.css';
 import Login from './components/login/login';
 
-function App({authService}) {
+function App({ authService }) {
   return (
     <div>
-      <Login authService={authService}/>
+      <Login authService={authService} />
     </div>
   );
 }
