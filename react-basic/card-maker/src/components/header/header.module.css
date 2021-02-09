@@ -1,0 +1,12 @@
+header {
+  padding: 25px 20px 15px;
+}
+header img {
+  width: 60px;
+}
+.btnLogout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+}

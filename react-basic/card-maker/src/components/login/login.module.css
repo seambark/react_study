@@ -8,12 +8,6 @@
   background-color: cadetblue;
   text-align: center;
 }
-.loginArea header {
-  padding: 25px 20px 15px;
-}
-.loginArea header img {
-  width: 60px;
-}
 .content {
   padding: 25px 10px;
   background-color: #fff;
