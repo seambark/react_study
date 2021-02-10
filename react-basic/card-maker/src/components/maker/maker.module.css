@@ -1,0 +1,15 @@
+.makerWrap {
+  position: relative;
+  height: 100%;
+  padding-bottom: 53px;
+  background-color: #fff;
+}
+.makerWrap footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.content {
+  position: relative;
+  display: flex;
+}

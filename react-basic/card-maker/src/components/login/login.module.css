@@ -1,16 +1,16 @@
 .loginArea {
+  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 400px;
   transform: translate(-50%, -50%);
   border-radius: 6px;
-  background-color: cadetblue;
-  text-align: center;
 }
 .content {
   padding: 25px 10px;
   background-color: #fff;
+  text-align: center;
 }
 ul {
   margin-top: 20px;

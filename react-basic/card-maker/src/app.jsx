@@ -6,7 +6,7 @@ import Maker from './components/maker/maker';
 
 function App({ authService }) {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
@@ -17,7 +17,7 @@ function App({ authService }) {
           </Route>
         </Switch>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

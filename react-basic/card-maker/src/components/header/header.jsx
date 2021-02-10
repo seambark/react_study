@@ -5,7 +5,7 @@ const Header = ({onLogout}) => (
     <header>
         { onLogout && <button className={styles.btnLogout} onClick={onLogout}>Logout</button> }
         <img src="/images/logo.png" alt=""/>
-        <h2>Business Card Maker</h2>
+        <h2 className={styles.title}>Business Card Maker</h2>
     </header>
 );
 

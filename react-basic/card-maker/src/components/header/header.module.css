@@ -1,5 +1,9 @@
+@value makerGreen from '../../common/colors.css';
+
 header {
   padding: 25px 20px 15px;
+  background-color: makerGreen;
+  text-align: center;
 }
 header img {
   width: 60px;
@@ -8,5 +12,10 @@ header img {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 100px;
+  width: 70px;
+  padding: 7px;
+  border-radius: 5px;
+}
+.title {
+  color: #fff;
 }
