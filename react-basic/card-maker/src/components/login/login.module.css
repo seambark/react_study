@@ -7,21 +7,21 @@
   transform: translate(-50%, -50%);
   border-radius: 6px;
 }
-.content {
+.loginArea .content {
   padding: 25px 10px;
   background-color: #fff;
   text-align: center;
 }
-ul {
+.loginArea ul {
   margin-top: 20px;
 }
-li {
+.loginArea li {
   margin-top: 10px;
 }
-li:first-child {
+.loginArea li:first-child {
   margin-top: 0;
 }
-button {
+.loginArea button {
   width: 100%;
   padding: 10px;
   border: 1px solid cadetblue;
