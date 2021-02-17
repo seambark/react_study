@@ -1,0 +1,42 @@
+@value makerGrey, makerLightGrey, makerPink from '../../common/colors.css';
+
+.cardEditor {
+  margin-top: 20px;
+  border: 1px solid makerGrey;
+}
+.cardEditor:first-of-type {
+  margin-top: 0;
+}
+.cardEditor li {
+  display: flex;
+  min-height: 40px;
+  border-bottom: 1px solid makerGrey;
+}
+input,
+select,
+textarea {
+  flex: 1 1 0;
+  padding: 0 10px;
+  border-width: 0 0 0 1px;
+  border-color: makerGrey;
+}
+input:first-child,
+select:first-child,
+textarea:first-child {
+  border-left: 0;
+}
+textarea {
+  height: 60px;
+  padding: 10px;
+}
+.btnArea {
+  display: flex;
+  height: 40px;
+}
+.btnArea button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+}

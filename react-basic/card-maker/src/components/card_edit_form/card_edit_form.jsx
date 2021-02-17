@@ -23,9 +23,9 @@ const CardEditForm = ({card}) => {
                     <input type="text" name="name" value={name} placeholder="Name" title="이름"/>
                     <input type="text" name="company" value={company} placeholder="Company" title="회사명"/>
                     <select name="theme" value={theme}>
-                        <option value="dark">Dark</option>
-                        <option value="colorful">Colorful</option>
-                        <option value="light">Light</option>
+                        <option value="dark">dark</option>
+                        <option value="colorful">colorful</option>
+                        <option value="light">light</option>
                     </select>
                 </li>
                 <li>
