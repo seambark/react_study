@@ -7,8 +7,8 @@ import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
 const Maker = ({ authService }) => {
-    const [cards, setCards] = useState([
-        {
+    const [cards, setCards] = useState({
+        '1': {
             id:'1',
             name: 'Ellie',
             company: 'Samaung',
@@ -19,7 +19,7 @@ const Maker = ({ authService }) => {
             fileName: 'ellie',
             fileURL: './images/default_logo.png'
         },
-        {
+        '2': {
             id:'2',
             name: 'Bob',
             company: 'Uber',
@@ -30,7 +30,7 @@ const Maker = ({ authService }) => {
             fileName: 'ellie',
             fileURL:'./images/default_logo.png'
         },
-        {
+        '3': {
             id:'3',
             name: 'Chris',
             company: 'Instagram',
@@ -41,7 +41,8 @@ const Maker = ({ authService }) => {
             fileName: 'ellie',
             fileURL:'./images/default_logo.png'
         }
-    ]);
+    });
+    
     const history = useHistory();
     const onLogout = () => {
         authService.logout();
@@ -55,16 +56,26 @@ const Maker = ({ authService }) => {
         });
     });
 
-    const addCard = (card) => {
-        const updated = [...cards, card];
-        setCards(updated);
+    const creatOrUpdateCard = card => {
+        setCards(cards => {
+            const updated = {...cards};
+            updated[card.id] = card;
+            return updated;
+        });
+    };
+    const deleteCard = card => {
+        setCards(cards => {
+            const updated = {...cards};
+            delete updated[card.id];
+            return updated;
+        });
     };
 
     return (
         <section className={styles.makerWrap}>
             <Header onLogout={onLogout} />
             <div className={styles.content} role="main">
-                <Editor cards={cards} addCard={addCard} />
+                <Editor cards={cards} addCard={creatOrUpdateCard} updateCard={creatOrUpdateCard} deleteCard={deleteCard} />
                 <Preview cards={cards} />
             </div>
             <Footer />

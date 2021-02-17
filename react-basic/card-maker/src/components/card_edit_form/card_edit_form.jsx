@@ -3,7 +3,7 @@ import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
 import styles from './card_edit_form.module.css'
 
-const CardEditForm = ({card}) => {
+const CardEditForm = ({ card, updateCard, deleteCard }) => {
     const {
         name,
         company,
@@ -14,33 +14,44 @@ const CardEditForm = ({card}) => {
         fileName,
         fileURL
     } = card;
-    const onSubmit = () => {};
+
+    const onChange = event => {
+        if(event.currentTarget == null) {
+            return;
+        }
+        event.preventDefault();
+        updateCard ({
+            ...card,
+            [event.currentTarget.name]: event.currentTarget.value,
+        });
+    };
+    const onSubmit = () => {
+        deleteCard(card);
+    };
 
     return (
         <form className={styles.cardEditor}>
             <ul>
                 <li>
-                    <input type="text" name="name" value={name} placeholder="Name" title="이름"/>
-                    <input type="text" name="company" value={company} placeholder="Company" title="회사명"/>
-                    <select name="theme" value={theme}>
+                    <input type="text" name="name" value={name} placeholder="Name" title="이름" onChange={onChange} />
+                    <input type="text" name="company" value={company} placeholder="Company" title="회사명" onChange={onChange} />
+                    <select name="theme" value={theme} onChange={onChange} >
                         <option value="dark">dark</option>
                         <option value="colorful">colorful</option>
                         <option value="light">light</option>
                     </select>
                 </li>
                 <li>
-                    <input type="text" name="title" value={title} placeholder="Title" title="직책"/>
-                    <input type="email" name="email" value={email} placeholder="Email" title="이메일"/>
+                    <input type="text" name="title" value={title} placeholder="Title" title="직책" onChange={onChange} />
+                    <input type="email" name="email" value={email} placeholder="Email" title="이메일" onChange={onChange} />
                 </li>
                 <li>
-                    <textarea name="message" value={message} placeholder="Message"></textarea>
+                    <textarea name="message" value={message} placeholder="Message" onChange={onChange} ></textarea>
                 </li>
             </ul>
             <div className={styles.btnArea}>
                 <ImageFileInput />
                 <Button name="Delete" onClick={onSubmit}/>
-                {/* <button type="button" className={styles.btnImg}>No File</button>
-                <button type="button" className={styles.btnAdd}>Add</button> */}
             </div>
         </form>
     );
