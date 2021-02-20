@@ -16,8 +16,8 @@ const Maker = ({ FileInput, authService }) => {
             title: 'Software Engineer',
             email: 'ellie@gmail.com',
             message: 'go for it',
-            fileName: 'ellie',
-            fileURL: './images/default_logo.png'
+            fileName: '',
+            fileURL: ''
         },
         '2': {
             id:'2',
@@ -27,8 +27,8 @@ const Maker = ({ FileInput, authService }) => {
             title: 'Software Engineer',
             email: 'ellie@gmail.com',
             message: 'I love coding',
-            fileName: 'ellie',
-            fileURL:'./images/default_logo.png'
+            fileName: '',
+            fileURL:''
         },
         '3': {
             id:'3',
@@ -38,8 +38,8 @@ const Maker = ({ FileInput, authService }) => {
             title: 'Software Engineer',
             email: 'ellie@gmail.com',
             message: 'go for it',
-            fileName: 'ellie',
-            fileURL:'./images/default_logo.png'
+            fileName: '',
+            fileURL:''
         }
     });
     

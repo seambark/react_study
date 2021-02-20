@@ -1,5 +1,6 @@
 @value makerGreen from '../../common/colors.css';
 .button {
+  flex: 1 1 0;
   background-color: makerGreen;
   color: #fff;
 }
