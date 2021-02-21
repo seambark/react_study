@@ -32,8 +32,7 @@ const CardAddForm = ({ FileInput, onAdd }) => {
             fileURL: file.fileURL || '',
         };
         formRef.current.reset();
-        console.log(card);
-        // setFile({fileName: null, fileURL: null});
+        setFile({fileName: null, fileURL: null});
         onAdd(card);
     }
     return (
@@ -42,7 +41,7 @@ const CardAddForm = ({ FileInput, onAdd }) => {
                 <li>
                     <input ref={nameRef} type="text" name="name" placeholder="Name" title="이름"/>
                     <input ref={companyRef} type="text" name="company" placeholder="Company" title="회사명"/>
-                    <select ref={themeRef} name="theme" >
+                    <select ref={themeRef} name="theme" placeholder="테마">
                         <option value="dark">dark</option>
                         <option value="colorful">colorful</option>
                         <option value="light">light</option>

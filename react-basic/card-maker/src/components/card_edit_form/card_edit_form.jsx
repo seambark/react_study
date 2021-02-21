@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Button from '../button/button';
 import styles from './card_edit_form.module.css'
 
 const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
+    const nameRef = useRef();
+    const companyRef = useRef();
+    const themeRef = useRef();
+    const titleRef = useRef();
+    const emailRef = useRef();
+    const messageRef = useRef();
+
     const {
         name,
         company,
@@ -11,7 +18,6 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         message,
         theme,
         fileName,
-        fileURL
     } = card;
 
     const onFileChange = file => {
@@ -40,20 +46,20 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         <form className={styles.cardEditor}>
             <ul>
                 <li>
-                    <input type="text" name="name" value={name} placeholder="Name" title="이름" onChange={onChange} />
-                    <input type="text" name="company" value={company} placeholder="Company" title="회사명" onChange={onChange} />
-                    <select name="theme" value={theme} onChange={onChange} >
+                    <input type="text" name="name" value={name} placeholder="Name" title="이름" ref={nameRef} onChange={onChange} />
+                    <input type="text" name="company" value={company} placeholder="Company" title="회사명" ref={companyRef} onChange={onChange} />
+                    <select name="theme" value={theme} ref={themeRef} onChange={onChange} >
                         <option value="dark">dark</option>
                         <option value="colorful">colorful</option>
                         <option value="light">light</option>
                     </select>
                 </li>
                 <li>
-                    <input type="text" name="title" value={title} placeholder="Title" title="직책" onChange={onChange} />
-                    <input type="email" name="email" value={email} placeholder="Email" title="이메일" onChange={onChange} />
+                    <input type="text" name="title" value={title} placeholder="Title" title="직책" ref={titleRef} onChange={onChange} />
+                    <input type="email" name="email" value={email} placeholder="Email" title="이메일" ref={emailRef} onChange={onChange} />
                 </li>
                 <li>
-                    <textarea name="message" value={message} placeholder="Message" onChange={onChange} ></textarea>
+                    <textarea name="message" value={message} ref={messageRef} placeholder="Message" onChange={onChange} ></textarea>
                 </li>
             </ul>
             <div className={styles.btnArea}>
