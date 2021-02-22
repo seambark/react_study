@@ -6,7 +6,7 @@ const ImageFileInput = ({ imageUploader, name, onFileChange }) => {
 
     const inputRef = useRef();
     const onButtonClick = event => {
-        event.preventDafault();
+        event.preventDefault();
         inputRef.current.click();
     };
 
